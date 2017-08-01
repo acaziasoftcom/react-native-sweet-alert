@@ -1,4 +1,4 @@
-package com.clipsub.sweetalert;
+package com.clipsub.RNSweetAlert;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

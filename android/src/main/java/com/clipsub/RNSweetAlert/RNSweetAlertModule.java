@@ -1,4 +1,4 @@
-package com.clipsub.sweetalert;
+package com.clipsub.RNSweetAlert;
 
 import android.graphics.Color;
 
