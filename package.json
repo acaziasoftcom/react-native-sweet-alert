@@ -1,6 +1,6 @@
 {
   "name": "react-native-sweet-alert",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SweetAlert native library for React Native",
   "main": "index.js",
   "scripts": {

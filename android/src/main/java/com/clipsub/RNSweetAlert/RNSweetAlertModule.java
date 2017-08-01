@@ -1,4 +1,4 @@
-package com.rnpackageplayground.sweetalert;
+package com.clipsub.sweetalert;
 
 import android.graphics.Color;
 

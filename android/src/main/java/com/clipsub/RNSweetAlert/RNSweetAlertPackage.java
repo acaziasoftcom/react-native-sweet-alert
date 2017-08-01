@@ -1,4 +1,4 @@
-package com.rnpackageplayground.sweetalert;
+package com.clipsub.sweetalert;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
