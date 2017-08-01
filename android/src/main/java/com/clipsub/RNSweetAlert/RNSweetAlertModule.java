@@ -15,7 +15,6 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
   private SweetAlertDialog sweetAlertDialog;
   RNSweetAlertModule(final ReactApplicationContext reactContext) {
     super(reactContext);
-    sweetAlertDialog = new SweetAlertDialog(reactContext);
   }
 
   @Override
@@ -25,6 +24,7 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void showSweetAlert(ReadableMap options, final Callback acceptCallback, final Callback cancelCallback) {
+    sweetAlertDialog = new SweetAlertDialog(getCurrentActivity());
     String type = options.getString("type");
     String title = options.getString("title");
     String contentText = options.getString("contentText");
