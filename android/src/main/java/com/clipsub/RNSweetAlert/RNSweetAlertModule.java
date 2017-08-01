@@ -19,7 +19,7 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "SweetAlert";
+    return "RNSweetAlert";
   }
 
   @ReactMethod
