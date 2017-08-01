@@ -1,0 +1,34 @@
+{
+  "name": "react-native-sweet-alert",
+  "version": "1.0.0",
+  "description": "SweetAlert native library for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clip-sub/react-native-sweet-alert.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "sweetalert",
+    "dialog",
+    "android",
+    "ios"
+  ],
+  "author": "Clip-sub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Clip-sub/react-native-sweet-alert/issues"
+  },
+  "homepage": "https://github.com/Clip-sub/react-native-sweet-alert#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+}
