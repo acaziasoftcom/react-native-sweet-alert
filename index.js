@@ -7,7 +7,7 @@
 import React, { NativeModules } from 'react-native';
 
 const SweetAlert = {
-  showAlert: (data) => NativeModules.RNSweetAlert.showSweetAlert(data),
+  showAlert: (data, acceptCallback, cancelCallback) => NativeModules.RNSweetAlert.showSweetAlert(data, acceptCallback, cancelCallback),
   dismissAlert: () => NativeModules.RNSweetAlert.hideSweetAlert(),
   changeAlertType: (type) => NativeModules.RNSweetAlert.changeAlertType(type),
 };
