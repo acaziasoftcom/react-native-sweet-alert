@@ -18,6 +18,8 @@ react-native link react-native-sweet-alert
 
 # On Android:
 
+__In the AndroidManifest.xml file__
+
 Below this line:
 
 `
