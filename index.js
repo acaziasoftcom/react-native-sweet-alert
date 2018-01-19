@@ -33,8 +33,14 @@ const SweetAlert = {
   },
   setBarColor: (barColor) => {
   	if (isHex(barColor)) {
-  		SweetAlertNative.setBarColor(barColor);
+  		  Native.setBarColor(barColor);
   	}
+  },
+  resetCount: () => {
+        Native.resetCount();
+  },
+  spin: () => {
+        Native.spin();
   }
 
 };

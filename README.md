@@ -85,7 +85,7 @@ SweetAlert.showAlert({
 
 `spin():` Start spinning.
 
-`setBarColor(type: string)` Changes the bar color. Argument must be a hex color string like `#ff0000`
+`setBarColor(type: string)` Changes the progress bar color. Argument must be a hex color string like `#ff0000`
 
 # On iOS:
 
