@@ -50,9 +50,11 @@ so it will look like:
   android:theme="@style/AppTheme">
 ```
 
-And then you can use the library like so:
+__And then you can use the library like so:__
 
+```
 import SweetAlert from 'react-native-sweet-alert';
+```
 
 ```
 SweetAlert.showAlert({
@@ -65,37 +67,25 @@ SweetAlert.showAlert({
   cancelButtonCallback => console.log(cancelButtonCallback));
 ```
 
-Extra options and methods (Android only):
+### Extra options and methods (Android only):
 
-dismissAlert():
+`dismissAlert():` Dismiss the alert with JavaScript code. Since the dialog is single instance.
 
-Dismiss the alert with JavaScript code. Since the dialog is single instance.
+`changeAlertType(type: string):` Change the alert type, one of following: normal, error, success, warning, progress
 
-changeAlertType(type: string):
+`showContentText():` Show the content text with animation.
 
-Change the alert type, one of following: normal, error, success, warning, progress
-
-showContentText():
-
-Show the content text with animation.
-
-showCancelButton():
-
-Show the cancel button with animation.
+`showCancelButton():` Show the cancel button with animation.
 
 ### With the dialog in progress mode, we also have following methods available:
 
-resetCount()
+`resetCount()` Reset the counter of the progress.
 
-Reset the counter of the progress.
+`isSpinning(): Promise` Get spinning status of the progress bar.
 
-isSpinning(): Promise
+`spin():` Start spinning.
 
-Get spinning status of the progress bar.
-
-spin():
-
-Start spinning.
+`setBarColor(type: string)` Changes the bar color. Argument must be a hex color string like `#ff0000`
 
 # On iOS:
 
