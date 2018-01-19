@@ -11,7 +11,7 @@ const Native = NativeModules.RNSweetAlert;
 
 const SweetAlert = {
   showAlert: (data = {}, acceptCallback = () => true, cancelCallback = () => true) => {
-    SweetAlertNative.showSweetAlert({
+    Native.showSweetAlert({
       type: 'normal',
       title: '',
       contentText: '',
