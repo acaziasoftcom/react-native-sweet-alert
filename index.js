@@ -21,12 +21,12 @@ const SweetAlert = {
   },
   dismissAlert: () => Native.hideSweetAlert(),
   changeAlertType: (type) => Native.changeAlertType(type),
-  showCancelButton: (bool) => {
+  showCancelButton: (bool = true) => {
      if (typeof bool == 'boolean') {
         Native.showCancelButton(bool);
      }
   },
-  showContentText: (bool) => {
+  showContentText: (bool = true) => {
      if (typeof bool == 'boolean') {
         Native.showContentText(bool);
      }
