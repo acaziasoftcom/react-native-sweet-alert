@@ -30,5 +30,8 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
+  },
+  "dependencies": {
+    "is-hexcolor": "^1.0.0"
   }
 }
