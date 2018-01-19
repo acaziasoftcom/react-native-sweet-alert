@@ -73,9 +73,9 @@ SweetAlert.showAlert({
 
 `changeAlertType(type: string):` Change the alert type, one of following: normal, error, success, warning, progress
 
-`showContentText():` Show the content text with animation.
+`showContentText(type: boolean):` Show the content text with animation.
 
-`showCancelButton():` Show the cancel button with animation.
+`showCancelButton(type: boolean):` Show the cancel button with animation.
 
 ### With the dialog in progress mode, we also have following methods available:
 

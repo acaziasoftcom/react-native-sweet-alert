@@ -7,10 +7,10 @@
 import React, { NativeModules } from 'react-native';
 import isHex from 'is-hexcolor';
 
-const SweetAlertNative = NativeModules.RNSweetAlert;
+const Native = NativeModules.RNSweetAlert;
 
 const SweetAlert = {
-  showAlert: (data, acceptCallback = () => console.log('accepted'), cancelCallback = () => console.log('cancelled')) => {
+  showAlert: (data = {}, acceptCallback = () => true, cancelCallback = () => true) => {
     SweetAlertNative.showSweetAlert({
       type: 'normal', // error, success, warning, progress.
       title: '',
@@ -19,13 +19,23 @@ const SweetAlert = {
       ...data
     }, acceptCallback, cancelCallback);
   },
-  dismissAlert: () => SweetAlertNative.hideSweetAlert(),
-  changeAlertType: (type) => SweetAlertNative.changeAlertType(type),
+  dismissAlert: () => Native.hideSweetAlert(),
+  changeAlertType: (type) => Native.changeAlertType(type),
+  showCancelButton: (bool) => {
+     if (typeof bool == 'boolean') {
+        Native.showCancelButton(bool);
+     }
+  },
+  showContentText: (bool) => {
+     if (typeof bool == 'boolean') {
+        Native.showContentText(bool);
+     }
+  },
   setBarColor: (barColor) => {
   	if (isHex(barColor)) {
   		SweetAlertNative.setBarColor(barColor);
   	}
-  },
+  }
 
 };
 
