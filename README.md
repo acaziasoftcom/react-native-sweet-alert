@@ -1,20 +1,15 @@
-# Install the package from NPM:
 
-`
-yarn add react-native-sweet-alert
-`
+# react-native-sweet-alert
 
-or
+## Getting started
 
-`
-npm install --save react-native-sweet-alert
-`
+`$ npm install react-native-sweet-alert --save`
 
-# Link to the current project:
+### Mostly automatic installation
 
-`
-react-native link react-native-sweet-alert
-`
+`$ react-native link react-native-sweet-alert`
+
+### Manual installation
 
 # On Android:
 
