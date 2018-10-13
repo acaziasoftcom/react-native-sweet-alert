@@ -45,6 +45,14 @@ so it will look like:
   android:theme="@style/AppTheme">
 ```
 
+# On iOS:
+
+Since the vendor library is written in Swift, apart from doing usual `react-native link react-native-sweet-alert`, you will also have to create a Bridging Header for Swift file, which is also pretty easy:
+
+- Open the project with XCode.
+
+
+
 __And then you can use the library like so:__
 
 ```
