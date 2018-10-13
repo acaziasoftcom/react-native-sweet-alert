@@ -44,11 +44,6 @@ class SweetAlertManager: RCTViewManager {
     }
 
     @objc
-    func showAlertWithSubtitle(_ title: String, subTitle: String?) {
-        _ = alert.showAlert(title, subTitle: subTitle, style: AlertStyle.none)
-    }
-
-    @objc
     func hideSweetAlert() {
         _ = alert.closeAlert(0)
     }
