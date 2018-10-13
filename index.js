@@ -37,10 +37,10 @@ const SweetAlert = {
   	}
   },
   resetCount: () => {
-        Native.resetCount();
+    Native.resetCount();
   },
   spin: () => {
-        Native.spin();
+    Native.spin();
   }
 
 };
