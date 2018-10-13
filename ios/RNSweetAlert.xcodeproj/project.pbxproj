@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* RNSweetAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNSweetAlert.m */; };
 		EDCA746121719A39005A52E8 /* SweetAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA746021719A39005A52E8 /* SweetAlertManager.swift */; };
 		EDCA746321719A4A005A52E8 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA746221719A4A005A52E8 /* SweetAlert.swift */; };
 		EDCA74652171D35B005A52E8 /* SweetAlertBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCA74642171D35B005A52E8 /* SweetAlertBridge.m */; };
@@ -27,8 +26,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNSweetAlert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSweetAlert.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* RNSweetAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSweetAlert.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RNSweetAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSweetAlert.m; sourceTree = "<group>"; };
 		ED5834842171D63F002A623F /* RNSweetAlert-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNSweetAlert-Bridging-Header.h"; sourceTree = "<group>"; };
 		EDCA746021719A39005A52E8 /* SweetAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlertManager.swift; sourceTree = "<group>"; };
 		EDCA746221719A4A005A52E8 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
@@ -61,8 +58,6 @@
 				ED5834842171D63F002A623F /* RNSweetAlert-Bridging-Header.h */,
 				EDCA74642171D35B005A52E8 /* SweetAlertBridge.m */,
 				EDCA746021719A39005A52E8 /* SweetAlertManager.swift */,
-				B3E7B5881CC2AC0600A0062D /* RNSweetAlert.h */,
-				B3E7B5891CC2AC0600A0062D /* RNSweetAlert.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,7 +126,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* RNSweetAlert.m in Sources */,
 				EDCA746121719A39005A52E8 /* SweetAlertManager.swift in Sources */,
 				EDCA74652171D35B005A52E8 /* SweetAlertBridge.m in Sources */,
 				EDCA746321719A4A005A52E8 /* SweetAlert.swift in Sources */,
@@ -225,6 +219,7 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -235,7 +230,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNSweetAlert;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNSweetAlert-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -243,6 +238,7 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -253,7 +249,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNSweetAlert;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNSweetAlert-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
