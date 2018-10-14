@@ -69,9 +69,11 @@ Or you can just see `Example-Bridging-Header.h` and copy and paste in.
 
 - In XCode, make sure you chose your app target. Go to `Build Settings`:
 
-https://puu.sh/BKMZX.png
+![alt text](https://raw.githubusercontent.com/Clip-sub/react-native-sweet-alert/master/images/target.png "Sweet Alert")
 
 - Now to the important part: In `Objective-C Bridging Header`, double-click on it and type in your created `.h` file earlier. In the above example it is `CuteApp-Bridging-Header.h`.
+
+![alt text](https://raw.githubusercontent.com/Clip-sub/react-native-sweet-alert/master/images/bridging-header.png "Sweet Alert")
 
 - Make sure the path is relative. For example, if `CuteApp-Bridging-Header.h` is in `ios` folder, you only have to type `CuteApp-Bridging-Header.h` , but if it's in a sub-folder, you have to add the path too, e.g: `some-path/CuteApp-Bridging-Header.h`.
 
