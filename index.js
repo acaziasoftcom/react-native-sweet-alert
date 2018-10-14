@@ -1,14 +1,14 @@
 /**
  * @providesModule RNSweetAlert
+ * @author Doko
  * @flow
  */
 
 'use strict';
 
-import React, { NativeModules } from 'react-native';
-import isHex from 'is-hexcolor';
+import React, { NativeModules, Platform } from 'react-native';
 
-const Native = NativeModules.RNSweetAlert;
+const Native = Platform.OS === 'android' ? NativeModules.RNSweetAlert : NativeModules.SweetAlertManager;
 
 const DEFAULT_OPTIONS = {
   title: '',
@@ -17,12 +17,13 @@ const DEFAULT_OPTIONS = {
   confirmButtonColor: '#000',
   otherButtonTitle: 'Cancel',
   otherButtonColor: '#dedede',
-  style: 'success'
+  style: 'success',
+  cancellable: true
 }
 
 const SweetAlert = {
-  showAlertWithOptions: (options = DEFAULT_OPTIONS, callback = () => {}) => {
-    Native.showAlertWithOptions(options, callback)
+  showAlertWithOptions: (options, callback = () => {}) => {
+    Native.showAlertWithOptions(options ? options : DEFAULT_OPTIONS, callback)
   },
   dismissAlert: () => Native.hideSweetAlert(),
 };
