@@ -28,7 +28,7 @@ class SweetAlertManager: RCTViewManager {
             convertedStyle = AlertStyle.error
             break
         case "success":
-            convertedStyle = AlertStyle.error
+            convertedStyle = AlertStyle.success
             break
         case "warning":
             convertedStyle = AlertStyle.warning
