@@ -70,16 +70,6 @@ SweetAlert.showAlert({
   cancelButtonCallback => console.log(cancelButtonCallback));
 ```
 
-### Extra options and methods (Android only):
-
-`dismissAlert():` Dismiss the alert with JavaScript code. Since the dialog is single instance.
-
-`changeAlertType(type: string):` Change the alert type, one of following: normal, error, success, warning, progress
-
-`showContentText(type: boolean):` Show the content text with animation.
-
-`showCancelButton(type: boolean):` Show the cancel button with animation.
-
 ### With the dialog in progress mode, we also have following methods available:
 
 `resetCount()` Reset the counter of the progress.
