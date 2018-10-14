@@ -51,7 +51,7 @@ so it will look like:
 
 # On iOS:
 
-Since the vendor library is written in Swift, apart from doing usual `react-native link react-native-sweet-alert`, you will also have to create a Bridging Header for Swift file, since vendor library is written in Swift, which is also pretty easy:
+Since the vendor library is written in Swift, apart from doing usual `react-native link react-native-sweet-alert`, you will also have to create a Bridging Header for Swift file, which is also pretty easy:
 
 - Open the project with XCode (don't forget to open XCode, since using other editors won't be enough), create a new `.h` file. I recommend to create something like `<Your-App-Name>-Bridging-Header.h` , for example, if your app is named `CuteApp`, then it should be `CuteApp-Bridging-Header.h`
 
