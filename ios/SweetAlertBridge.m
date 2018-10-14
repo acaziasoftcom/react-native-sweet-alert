@@ -12,6 +12,8 @@ RCT_EXTERN_METHOD(showAlert: (NSString *)title callback:(RCTResponseSenderBlock)
 
 RCT_EXTERN_METHOD(showAlertWithSubtitle: (NSString *)title subTitle:(NSString *) subTitle);
 
+RCT_EXTERN_METHOD(showAlertWithOptions: (NSDictionary *)options callback:(RCTResponseSenderBlock));
+
 RCT_EXTERN_METHOD(hideSweetAlert);
 
 @end

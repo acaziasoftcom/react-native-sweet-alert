@@ -10,13 +10,13 @@ class SweetAlertManager: RCTViewManager {
     }
 
     @objc
-    func showAlertWithOptions(options: NSDictionary, callback: @escaping RCTResponseSenderBlock) {
+    func showAlertWithOptions(_ options: NSDictionary, callback: @escaping RCTResponseSenderBlock) {
         let title: String = options.object(forKey: "title") as! String
         let subTitle: String = options.object(forKey: "subTitle") as! String
         let confirmButtonTitle: String = options.object(forKey: "confirmButtonTitle") as! String
         let confirmButtonColor: String = options.object(forKey: "confirmButtonColor") as! String
         
-        let otherButtonTitle: String = options.object(forKey: "buttonTitle") as! String
+        let otherButtonTitle: String = options.object(forKey: "otherButtonTitle") as! String
         let otherButtonColor: String = options.object(forKey: "otherButtonColor") as! String
 
         // error none success warning
@@ -39,7 +39,7 @@ class SweetAlertManager: RCTViewManager {
 
         _ = alert.showAlert(title, subTitle: subTitle, style: convertedStyle, buttonTitle: confirmButtonTitle, buttonColor: hexStringToUIColor(hex: confirmButtonColor), otherButtonTitle: otherButtonTitle, otherButtonColor: hexStringToUIColor(hex: otherButtonColor), action: { (isOtherButton: Bool) in
             // True == isOtherButton.
-            callback([NSNull(), isOtherButton])
+            callback([isOtherButton, isOtherButton])
         })
     }
 
