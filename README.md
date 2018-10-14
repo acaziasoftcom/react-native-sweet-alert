@@ -1,5 +1,9 @@
 
-# react-native-sweet-alert
+# React Native Sweet Alert
+
+### Cute sweet alert for your app and your day.
+
+![alt text](https://raw.githubusercontent.com/Clip-sub/react-native-sweet-alert/master/images/demo.gif "Sweet Alert")
 
 ## Getting started
 
@@ -47,10 +51,33 @@ so it will look like:
 
 # On iOS:
 
-Since the vendor library is written in Swift, apart from doing usual `react-native link react-native-sweet-alert`, you will also have to create a Bridging Header for Swift file, which is also pretty easy:
+Since the vendor library is written in Swift, apart from doing usual `react-native link react-native-sweet-alert`, you will also have to create a Bridging Header for Swift file, since vendor library is written in Swift, which is also pretty easy:
 
-- Open the project with XCode.
+- Open the project with XCode (don't forget to open XCode, since using other editors won't be enough), create a new `.h` file. I recommend to create something like `<Your-App-Name>-Bridging-Header.h` , for example, if your app is named `CuteApp`, then it should be `CuteApp-Bridging-Header.h`
 
+- Paste in following code into that newly created `.h` file:
+
+````
+#import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
+#import <React/RCTViewManager.h>
+#import <React/RCTConvert.h>
+#import <React/RCTUtils.h>
+````
+
+Or you can just see `Example-Bridging-Header.h` and copy and paste in.
+
+- In XCode, make sure you chose your app target. Go to `Build Settings`:
+
+https://puu.sh/BKMZX.png
+
+- Now to the important part: In `Objective-C Bridging Header`, double-click on it and type in your created `.h` file earlier. In the above example it is `CuteApp-Bridging-Header.h`.
+
+- Make sure the path is relative. For example, if `CuteApp-Bridging-Header.h` is in `ios` folder, you only have to type `CuteApp-Bridging-Header.h` , but if it's in a sub-folder, you have to add the path too, e.g: `some-path/CuteApp-Bridging-Header.h`.
+
+- In `Swift Language Version`, choose `4.2`. Yeah I had to convert the syntax of original library from Swift 2 to Swift 4.
+
+- Another important step: You have to create at least a `.swift` file in your project. It can be an empty Swift file, but it must exist.
 
 
 __And then you can use the library like so:__
@@ -61,16 +88,23 @@ import SweetAlert from 'react-native-sweet-alert';
 
 ```
 SweetAlert.showAlert({
-  type: 'normal', // error, success, warning, progress (Android Only).
-  title: 'Example Title',
-  contentText: 'Example Content Text',
-  cancellable: true,
+  title: '',
+  subTitle: '',
+  confirmButtonTitle: 'OK',
+  confirmButtonColor: '#000',
+  otherButtonTitle: 'Cancel',
+  otherButtonColor: '#dedede',
+  style: 'success',
+  cancellable: true
 },
-  acceptButtonCallback => console.log(acceptButtonCallback),
-  cancelButtonCallback => console.log(cancelButtonCallback));
+  callback => console.log(acceptButtonCallback));
 ```
 
-### With the dialog in progress mode, we also have following methods available:
+- The first parameter is dialog option with above available properties. Please note that `confirmButtonColor` and `otherButtonColor` is only available on iOS.
+
+- The second parameter is callback, which returns a boolean value. Use it as you wish.
+
+### With the dialog in progress mode, we also have following methods available (Android Only):
 
 `resetCount()` Reset the counter of the progress.
 
@@ -80,6 +114,26 @@ SweetAlert.showAlert({
 
 `setBarColor(type: string)` Changes the progress bar color. Argument must be a hex color string like `#ff0000`
 
-# On iOS:
+# LICENSE
 
-I'm still working on the iOS port, if you are willing to help, welcome.
+MIT License
+
+Copyright (c) 2018 Clip-sub
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
