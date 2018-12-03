@@ -3,7 +3,6 @@
 //  RNSweetAlert
 //
 //  Created by Quan Pham  on 10/13/18.
-//  Copyright © 2018 Facebook. All rights reserved.
 //
 
 #import <React/RCTBridgeModule.h>
