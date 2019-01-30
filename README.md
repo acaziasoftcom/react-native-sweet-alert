@@ -53,6 +53,8 @@ so it will look like:
 
 Since the vendor library is written in Swift, apart from doing usual `react-native link react-native-sweet-alert`, you will also have to create a Bridging Header for Swift file, which is also pretty easy:
 
+- ou have to create at least a `.swift` file in your project. It can be an empty Swift file, but it must exist. After that, XCode will ask you to "Create bridging header?" which enables Swift Bridging Header in Build Settings below.
+
 - Open the project with XCode (don't forget to open XCode, since using other editors won't be enough), create a new `.h` file. I recommend to create something like `<Your-App-Name>-Bridging-Header.h` , for example, if your app is named `CuteApp`, then it should be `CuteApp-Bridging-Header.h`
 
 - Paste in following code into that newly created `.h` file:
@@ -79,8 +81,6 @@ Or you can just see `Example-Bridging-Header.h` and copy and paste in.
 
 - In `Swift Language Version`, choose `4.2`. Yeah I had to convert the syntax of original library from Swift 2 to Swift 4.
 
-- Another important step: You have to create at least a `.swift` file in your project. It can be an empty Swift file, but it must exist.
-
 
 __And then you can use the library like so:__
 
@@ -89,7 +89,7 @@ import SweetAlert from 'react-native-sweet-alert';
 ```
 
 ```
-SweetAlert.showAlert({
+SweetAlert.showAlertWithOptions({
   title: '',
   subTitle: '',
   confirmButtonTitle: 'OK',
@@ -99,7 +99,7 @@ SweetAlert.showAlert({
   style: 'success',
   cancellable: true
 },
-  callback => console.log(acceptButtonCallback));
+  callback => console.log('callback'));
 ```
 
 - The first parameter is dialog option with above available properties. Please note that `confirmButtonColor` and `otherButtonColor` is only available on iOS.
