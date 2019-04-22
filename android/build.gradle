@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile 'cn.pedant.sweetalert:library:1.3'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
 }
