@@ -13,6 +13,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class RNSweetAlertModule extends ReactContextBaseJavaModule {
   private SweetAlertDialog sweetAlertDialog;
+
   RNSweetAlertModule(final ReactApplicationContext reactContext) {
     super(reactContext);
   }
@@ -25,10 +26,11 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void showAlertWithOptions(ReadableMap options, final Callback acceptCallback) {
     sweetAlertDialog = new SweetAlertDialog(getCurrentActivity());
-    String type = options.getString("style");
-    String title = options.getString("title");
-    String contentText = options.getString("subTitle");
-    boolean cancellable = options.getBoolean("cancellable");
+    String type = options.hasKey("style") ? options.getString("style") : "normal";
+    String title = options.hasKey("title") ? options.getString("title") : "";
+    String contentText = options.hasKey("subTitle") ? options.getString("subTitle") : "";
+    String barColor = options.hasKey("barColor") ? options.getString("barColor") : "";
+    boolean cancellable = !options.hasKey("cancellable") || options.getBoolean("cancellable");
     switch (type) {
       case "normal":
         sweetAlertDialog.changeAlertType(SweetAlertDialog.NORMAL_TYPE);
@@ -66,6 +68,9 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
     sweetAlertDialog.setTitleText(title);
     sweetAlertDialog.setContentText(contentText);
     sweetAlertDialog.setCancelable(cancellable);
+    if (!barColor.equals("")) {
+      setBarColor(barColor);
+    }
     sweetAlertDialog.show();
   }
 
@@ -120,7 +125,7 @@ public class RNSweetAlertModule extends ReactContextBaseJavaModule {
   public void isSpinning(Promise promise) {
     try {
       promise.resolve(sweetAlertDialog.isShowing());
-    } catch(Exception e) {
+    } catch (Exception e) {
       promise.reject("SweetAlert", e);
     }
   }
