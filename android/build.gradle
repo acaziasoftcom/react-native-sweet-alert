@@ -20,5 +20,5 @@ android {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.3'
 }
