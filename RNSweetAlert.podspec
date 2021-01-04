@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "SweetAlert"
+  s.name         = "RNSweetAlert"
   s.version      = "3.1.0"
   s.summary      = "SweetAlert native library for React Native."
   s.homepage     = "https://github.com/Clip-sub/react-native-sweet-alert.git"
